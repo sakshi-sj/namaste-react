@@ -1,5 +1,24 @@
-const parent = React.createElement("div",{id:"parent"},React.createElement("div",{id:"child"},[React.createElement("h1",{},"I am h1"),React.createElement("h2",{},"I am h2")]))
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-// const heading = React.createElement("h1", {id: "heading"}, "hello from react");
-        const root = ReactDOM.createRoot(document.getElementById("root"));
-        root.render(parent);
+
+
+// using jsx
+const jsxHeading = <h1 id="heading"> this is jsx</h1>
+
+const Title = () => (
+        <h1 className="head"> NAMASTE REACT</h1>
+);
+
+// React functional component
+const HeadingComponent = () => (
+        <div id="container">
+                <Title />
+<h1 className="heading">this is react functional component</h1>
+        </div>
+       
+)
+
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(<HeadingComponent/>)
+// root.render(jsxHeading)
